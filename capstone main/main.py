@@ -11,7 +11,7 @@ file.close()
  
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route('/probabilitydetector',methods=["GET","POST"])
 def covid_prob_dect():
@@ -30,7 +30,7 @@ def covid_prob_dect():
         print(infprob)
         return render_template("show.html",infprob=round(infprob*100))
 
-    return render_template("index.html")
+    return render_template("probdetector.html")
 
 
 
